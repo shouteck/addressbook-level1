@@ -566,6 +566,11 @@ public class AddressBook {
         return String.format(MESSAGE_DELETE_PERSON_SUCCESS, getMessageForFormattedPersonData(deletedPerson));
     }
 
+    /**
+     * Displays the current size of the address book.
+     *
+     * @return the number of contacts the address book has
+     */
     private static String executeSizeOfAddressBook() {
         return String.format(MESSAGE_SIZEOF_ADDRESSBOOK, ALL_PERSONS.size());
     }
@@ -1098,7 +1103,7 @@ public class AddressBook {
                 + getUsageInfoForFindCommand() + LS
                 + getUsageInfoForViewCommand() + LS
                 + getUsageInfoForDeleteCommand() + LS
-                + getUsageInfoForModifyCommand() + LS
+                + getUsageInfoForSizeCommand() + LS
                 + getUsageInfoForClearCommand() + LS
                 + getUsageInfoForExitCommand() + LS
                 + getUsageInfoForHelpCommand();
@@ -1126,7 +1131,7 @@ public class AddressBook {
     }
 
     /** Returns the string for showing 'size' command usage instruction */
-    private static String getUsageInfoForModifyCommand() {
+    private static String getUsageInfoForSizeCommand() {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_SIZE_WORD, COMMAND_SIZE_DESC) + LS
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_SIZE_EXAMPLE) + LS;
     }
